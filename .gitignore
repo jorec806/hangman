@@ -1,0 +1,26 @@
+# Ignorar archivos binarios y compilados
+*.o
+*.out
+*.exe
+hangman  # Ignorar el ejecutable compilado
+
+# Ignorar archivos temporales de macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+.vscode/
+
+# Ignorar carpetas de macOS
+__MACOSX/
+
+# Ignorar archivos de edición de texto
+*.swp
+*.swo
+*~
+
+# Ignorar configuraciones de depuración
+vgcore.*
+valgrind-log.*
+
+# Ignorar carpetas de C/C++ en algunos entornos
+*.dSYM/
