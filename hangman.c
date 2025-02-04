@@ -65,10 +65,22 @@ int main() {
 
     //GAME LOOP
     while(attemps > 0){
-        //Check if input is a letter
-        printf("Choose a letter: ");
-        scanf(" %c", &letter);
-        printf("\n");
+        
+        while(1){
+            printf("Choose a letter: ");
+            scanf(" %c", &letter);
+
+            while (getchar() != '\n');
+
+            printf("\n");
+
+            //Check if input is a letter
+            if(isalpha(letter)){
+                break;
+            }else {
+                printf("Wrong input. Try again.\n");
+            }
+        }
 
         //Check if letter is in Word
         if(searchLetter(word, letter, wordLength)){
@@ -147,7 +159,6 @@ void fillEmptyWord(char* word, char chosenLetter, char* emptyWord, int wordLengt
             emptyWord[x] = word[x];
         }
     }
-
 }
 
 void wrongAttempt(int *hangmanLevel, int *attemps){
